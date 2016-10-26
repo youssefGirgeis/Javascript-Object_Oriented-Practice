@@ -57,3 +57,16 @@ blackRabbit.speak3("Doom...");
 
 
 
+
+/* Overriding derived properties */
+
+
+Rabbit.prototype.teeth = 'small';
+console.log(killerRabbit.teeth);
+
+killerRabbit.teeth = "long, sharp, and bloody";
+console.log(killerRabbit.teeth);
+
+console.log(blackRabbit.teeth);
+console.log(Rabbit.prototype.teeth);
+
