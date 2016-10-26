@@ -37,3 +37,23 @@ console.log(empty.toString());
 console.log(Object.getPrototypeOf({}) == Object.prototype);
 console.log(Object.getPrototypeOf(isNaN) == Function.prototype);
 console.log(Object.getPrototypeOf([]) == Array.prototype);
+
+
+/* Constructors */
+
+function Rabbit(type){
+    this.type = type;
+}
+
+Rabbit.prototype.speak3 = function(line){
+    console.log("The " + this.type + " rabbit says '" + line + "'");
+}
+
+var killerRabbit = new Rabbit("Killer");
+var blackRabbit = new Rabbit("black");
+
+console.log(blackRabbit.type);
+blackRabbit.speak3("Doom...");
+
+
+
